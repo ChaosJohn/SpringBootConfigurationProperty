@@ -1,0 +1,15 @@
+server:
+  port: 9090
+greeting: Hello
+greetings:
+  EN: Hello
+  ES: Hola
+  DE: Hallo
+  CN: 你好
+user:
+  name: Chaos
+  gender: male
+  age: 21
+product:
+  name: picture
+  price: 12.3
