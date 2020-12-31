@@ -1,6 +1,8 @@
 # SpringBootConfigurationProperty
 ProjectFolder(ConfigurationProperty)
 
+[欢迎转载，但请在开头或结尾注明原文出处【blog.chaosjohn.com】](https://blog.chaosjohn.com/source/_posts/SpringBoot-ConfigurationProperties.html)
+
 ## 背景
 `SpringBoot` + `kotlin`
 
