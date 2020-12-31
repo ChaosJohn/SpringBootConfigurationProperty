@@ -9,11 +9,17 @@ import org.springframework.web.bind.annotation.ResponseBody
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class DefaultController(val rootProperties: RootProperties, val userProperties: UserProperties) {
+class Controller(val rootProperties: RootProperties, val userProperties: UserProperties) {
 
     @Qualifier("getProductProperties")
     @Autowired
     lateinit var productProperties: ProductProperties
+
+    @Autowired
+    lateinit var orderProperties: OrderProperties
+
+    @Value(value = "\${user.age}")
+    lateinit var userAge: String
 
     @Value(value = "\${server.port}")
     lateinit var port: String
@@ -48,6 +54,12 @@ class DefaultController(val rootProperties: RootProperties, val userProperties: 
         return userProperties
     }
 
+    @RequestMapping(value = ["/user/age"])
+    @ResponseBody
+    fun userAge(): Any {
+        return userAge
+    }
+
     @RequestMapping(value = ["/user/reset-age"])
     @ResponseBody
     fun resetUserAge(): Any {
@@ -66,5 +78,11 @@ class DefaultController(val rootProperties: RootProperties, val userProperties: 
     fun resetProductPrice(): Any {
         productProperties.price = 0.0
         return productProperties
+    }
+
+    @RequestMapping(value = ["/order"])
+    @ResponseBody
+    fun order(): Any {
+        return orderProperties
     }
 }

@@ -12,4 +12,9 @@ user:
   age: 21
 product:
   name: picture
+  seller: chaos
   price: 12.3
+  weight: 2
+order:
+  id: 1234d5
+  paid: 123
