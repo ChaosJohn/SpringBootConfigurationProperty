@@ -9,7 +9,7 @@ greetings:
 user:
   name: Chaos
   gender: male
-  age: 21
+  age: ${random.int}
 product:
   name: picture
   seller: chaos
